@@ -1,4 +1,4 @@
-GitHub Intro 11/30/2021
+### GitHub Intro 11/30/2021
 
 Mac Tricks
 - Creating multiple windows - three fingers swipe up on the track pad, add a desktop with the `+`, three fingers swipe side to side to nav between the desktops
