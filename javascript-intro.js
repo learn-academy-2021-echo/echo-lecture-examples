@@ -163,4 +163,94 @@ true
 // 4) assign value part 2, provide it a data type
 
 var helloEchoClass = "hello! It is the Echo class!"
-console.log(helloEchoClass)
+// console.log(1, helloEchoClass)
+
+helloEchoClass = "hey there."
+// console.log(2, helloEchoClass)
+
+helloEchoClass = 42
+// console.log(3, helloEchoClass)
+
+// Can log as many things as you want
+// console.log(4, 5, 6, "hey", true)
+
+// console.log(helloEchoClass + 56)
+// console.log(helloEchoClass > 56)
+
+// const myName = "Sarah"
+// console.log(myName)
+// myName = "Joe"
+// console.log(myName)
+// --> TypeError: Assignment to constant variable.
+
+
+
+// String Methods and Properties
+
+var cohort = "Echo"
+// console.log(cohort)
+
+// console.log(cohort.length)
+// --> 4
+// console.log(cohort.length > 8)
+// --> false
+
+// Index - the placement of each item in a string
+// console.log(cohort[0])
+// --> "E" is at the index of 0
+
+// console.log(cohort[1])
+
+// var myNum = 2
+// console.log(myNum)
+
+// console.log(cohort[myNum])
+// "Echo"[2]
+
+// console.log(cohort[9])
+// --> undefined
+
+// console.log(cohort[cohort.length])
+
+// the last index of any string is the length - 1
+
+
+
+var myCohort = "Echo Class"
+// console.log(myCohort.length)
+// --> 10
+
+// Built in methods - actions that have been added to the JS language over time
+
+// All built in method are designed for a particular data type
+// Parentheses are a call to action
+
+// console.log(myCohort.toUpperCase())
+// --> ECHO CLASS
+
+// console.log(myCohort.indexOf("C"))
+// --> 5
+
+// console.log(myCohort.indexOf("o"))
+// --> 3
+
+// console.log(myCohort.indexOf("s"))
+// console.log("Echo Class".indexOf("s"))
+// --> same result as above
+
+// console.log(myCohort.includes("Cl"))
+// --> true
+// console.log(myCohort.includes("CL"))
+// --> false
+
+// console.log(myCohort.includes("Cl") === true)
+// --> true
+
+// console.log(myCohort.includes("Cl") && myCohort.includes("E"))
+// --> true
+
+// Cutting a section the string and returning that section
+console.log(myCohort.slice(8))
+// --> "ss"
+console.log(myCohort.slice(0, 4))
+// --> "Echo"
