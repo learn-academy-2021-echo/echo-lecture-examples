@@ -32,7 +32,7 @@
         return "Donut is made";
     }
 
-    // console.log(makeDonut());
+    console.log(makeDonut());
 // invoking the function / calling the function
 // without a return key word the result is undefined (pro tip: if you get undefined check the return)
 
@@ -41,13 +41,13 @@
 //                 parameter
 //                     v
 const makeDonut = (doughType) => {
-//   //           parameter
-//   //              v
+//          parameter
+//             v
   return `A ${doughType} donut is made`;
 }
 
-// //                     argument
-// //                        v
+//                     argument
+//                        v
 console.log(makeDonut("glazed"));
 console.log(makeDonut("jelly"));
 console.log(makeDonut("Boston creme"));
@@ -57,7 +57,7 @@ console.log(makeDonut("Mapel"));
 // PB&J lessons
     // You have to be deliberate
     // Computers don't assume
-    // treat the machine like a child
+    // Treat the machine like a child
     // communicate w/ comp in lay person terms
     // computers don't fill in the blanks
     // syntax matters
@@ -77,13 +77,16 @@ const donutShop = (donutType, quantity) => {
   // if(this is true){then do this}
   // when quantity is one make a simple return
   if (quantity === 1) {
+      // return string interporlation w/ donutType and $1
     return `1 ${donutType} donut will cost you $1`;
   } else if (quantity === 12) {
+      
     return `A dozen ${doughType} donuts will cost you $10 `;
   }
   //   upt to 11 donuts the price is $1 per donut
   else if (quantity < 12) {
     // not hard coding `10 jelly donuts will cost you $10`;
+    // return string interporlation w/ donutType and $1 per quantity
     return `${quantity} ${donutType} donuts will cost you $${quantity}`;
   } else {
     return " hey thats a lot of donuts or something went wrong!";
