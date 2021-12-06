@@ -17,20 +17,20 @@
     // 4.) (), parenethese or parens- () can hold paratmeters
     // 5.) fat arrow, arrow syntax
     // 6.) code block/ curly braces - will hold all of the loigcal code
-        // const myMultiplicationFunction = () => {
+        const myMultiplicationFunction = () => {
     // 7.) return keyword, indiciating the output : stops the function
         //     return
         // };
 
     // 8.) call the function - name and parens
-            //  myMultiplicationFunction()
-    // console.log(myMultiplicationFunction());
+                myMultiplicationFunction()
+    console.log(myMultiplicationFunction());
 
 
 // static function (doesn't do cool dynamic stuff)
-    // const makeDonut = () => {
-    //     return "Donut is made";
-    // }
+    const makeDonut = () => {
+        return "Donut is made";
+    }
 
     // console.log(makeDonut());
 // invoking the function / calling the function
@@ -40,19 +40,19 @@
 
 //                 parameter
 //                     v
-// const makeDonut = (doughType) => {
+const makeDonut = (doughType) => {
 //   //           parameter
 //   //              v
-//   return `A ${doughType} donut is made`;
-// }
+  return `A ${doughType} donut is made`;
+}
 
 // //                     argument
 // //                        v
-// console.log(makeDonut("glazed"));
-// console.log(makeDonut("jelly"));
-// console.log(makeDonut("Boston creme"));
-// console.log(makeDonut("Sugar"));
-// console.log(makeDonut("Mapel"));
+console.log(makeDonut("glazed"));
+console.log(makeDonut("jelly"));
+console.log(makeDonut("Boston creme"));
+console.log(makeDonut("Sugar"));
+console.log(makeDonut("Mapel"));
 
 // PB&J lessons
     // You have to be deliberate
@@ -71,7 +71,7 @@
         // price, order size, order
     // 1 glazed donut => "1 glazed donut will cost you $1"
     // 10 sprinkel donuts => "10 sprinkle donuts will cost you $10"
-    // conditional statment
+    // conditional statments
 
 const donutShop = (donutType, quantity) => {
   // if(this is true){then do this}
@@ -100,8 +100,9 @@ console.log(donutShop(boston, 12));
 
 // 8 pieces of a function
 
-// const camelCaseName = (paramter) => {
-    // return parameter
-// }
+const camelCaseName = (parameter) => {
+    return parameter
+}
 
-//  call the function  camelCaseName(argument)
+//  call the function  
+camelCaseName(argument)
