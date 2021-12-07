@@ -1,7 +1,7 @@
 //Javascript Functions 12/06/21
 
 // Functions - reusable, functions produce an output (keyword "return")
-// Function - should neutral / generic : we don't want our functions to be "hard coded"
+// Function - should be neutral / generic : we don't want our functions to be "hard coded"
 // Functions - dynamic : can respond appropriately to inputs
 
 // Anatomy of a function 
