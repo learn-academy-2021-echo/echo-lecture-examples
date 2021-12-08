@@ -101,30 +101,113 @@
 
 
 
-let myNumbers = [4, 5, 6, 7, -9]
+// let myNumbers = [4, 5, 6, 7, -9]
 
-let evenOrOdd = myNumbers.map(value => {
-  if(value % 2 === 0){
-    return "even"
-  } else if(value % 2 !== 0){
-    return "odd"
-  } else {
-    return "not a number"
-  }
-})
+// let evenOrOdd = myNumbers.map(value => {
+//   if(value % 2 === 0){
+//     "even"
+//   } else if(value % 2 !== 0){
+//     "odd"
+//   } else {
+//     "not a number"
+//   }
+// })
 // console.log(evenOrOdd)
-
 // --> [ undefined, undefined, undefined, undefined, undefined ]
 // primitive data type - variable that has been declared but not given a value
+
+// let evenOrOdd = myNumbers.map(value => {
+//   if(value % 2 === 0){
+//     return "even"
+//   } else if(value % 2 !== 0){
+//     return "odd"
+//   } else {
+//     return "not a number"
+//   }
+// })
+// console.log(evenOrOdd)
 // all functions need a return
+// --> [ 'even', 'odd', 'even', 'odd', 'odd' ]
 
 // This does the same thing as the variable above
-console.log(myNumbers.map(value => {
-  if(value % 2 === 0){
-    return "even"
-  } else if(value % 2 !== 0){
-    return "odd"
-  } else {
-    return "not a number"
-  }
-}))
+// console.log(myNumbers.map(value => {
+//   if(value % 2 === 0){
+//     return "even"
+//   } else if(value % 2 !== 0){
+//     return "odd"
+//   } else {
+//     return "not a number"
+//   }
+// }))
+
+
+
+// .filter() - higher-order function, iterates, acts on arrays, take parameters value, index, array in that exact order, returns an array, built in conditional, filter makes a decision about every item in the array
+
+// filter is looking for a Boolean value, what is true will be included and what is false will be ignored
+
+// let myNumbers = [4, 5, 6, 7, -9]
+//
+// let onlyOdds = myNumbers.filter(value => {
+//   return value % 2 !== 0
+// })
+// console.log(onlyOdds)
+
+
+// let myArrayOfStuff = [6, 4, 5, true, false, 1000, "hello", "yo", null, 5]
+
+// let onlyNumbers = myArrayOfStuff.filter(value => {
+//   return typeof value === "number"
+// })
+// console.log(onlyNumbers)
+// --> [ 6, 4, 5, 1000, 5 ]
+
+// let onlyNumbers = myArrayOfStuff.filter(value => {
+//   return typeof value === "number" || typeof value === "string"
+// })
+// console.log(onlyNumbers)
+// --> [ 6, 4, 5, 1000, 'hello', 'yo', 5 ]
+
+// Create a function that takes in an array and returns an array of only numbers:
+// const onlyNumbersFunction = (array) => {
+//   return array.filter(value => {
+//     return typeof value === "number"
+//   })
+// }
+
+// Looking for numbers and strings
+// const onlyNumbersFunction = (array) => {
+//   return array.filter(value => {
+//     return typeof value === "number" || typeof value === "string"
+//   })
+// }
+// console.log(onlyNumbersFunction([4, 5, "hello"]))
+// console.log(onlyNumbersFunction(["hello", null, true]))
+// --> [ 6, 4, 5, 1000, 5 ]
+
+
+// Create a function that takes in an array and returns a specific data type as determined by the dev
+// const typeSelector = (array, type) => {
+//   return array.filter(value => {
+//     return typeof value === type
+//   })
+// }
+
+// propmpt: create a function that takes in an array and returns the word 'odd' for every odd number
+// create function called gettingOdds (done)
+// parameter - array (done)
+// filter out non-numbers (done)
+// filter out even numbers (done)
+// iterate over the remaining array and return the word "odd" instead of the number (done)
+
+let myArrayOfStuff = [6, 4, 5, true, false, 1000, "hello", "yo", null, 5]
+// ["odd", "odd"]
+
+const gettingOdds = (array) => {
+  let onlyOneType = array.filter(value => {
+    return typeof value === "number" && value % 2 !== 0
+  })
+  // cool one liner
+  return onlyOneType.map(value => "odd")
+}
+console.log(gettingOdds(myArrayOfStuff))
