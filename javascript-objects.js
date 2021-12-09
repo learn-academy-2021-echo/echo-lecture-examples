@@ -92,6 +92,65 @@ var numberObject = {
     return this.num1 + this.num2 + this.num3
   }
 }
-console.log(numberObject)
-console.log(numberObject.num1)
-console.log(numberObject.addUp())
+// console.log(numberObject)
+// console.log(numberObject.num1)
+// console.log(numberObject.addUp())
+
+
+
+// let pets = [
+//   {name: "Sheldon", type: "dog", age: 4},
+//   {name: "Yuki", type: "cat", age: 17},
+//   {name: "Eddie", type: "dog", age: 13},
+//   {name: "Zoey", type: "dog", age: 2},
+//   {name: "Artemis", type: "cat", age: 7}
+// ]
+
+// console.log(pets.length)
+// --> 5
+// console.log(pets[3])
+// --> { name: 'Zoey', type: "dog", age: 2 }
+
+// create a function - petNames
+// parameter - array
+// iterate - map
+// return array of just pet names
+const petNames = (array) => {
+  return array.map(value => {
+    return value.name
+  })
+}
+// console.log(petNames(pets))
+// --> [ 'Sheldon', 'Yuki', 'Eddie', 'Zoey', 'Artemis' ]
+
+
+
+let pets = [
+  {name: "Sheldon", type: "dog", age: 4},
+  {name: "Yuki", type: "cat", age: 17},
+  {name: "Eddie", type: "dog", age: 13},
+  {name: "Zoey", type: "dog", age: 2},
+  {name: "Artemis", type: "cat", age: 7}
+]
+// create a function called longTimeFriends
+// paramter - array
+// iterate - filter
+// where the pet ages are greater than or equal to 10
+// array of pet object with ages greater than or equal to 10
+
+const longTimeFriends = (array) => {
+  return array.filter(banana => {
+    return banana.age >= 10
+  })
+}
+// console.log(longTimeFriends(pets))
+
+
+
+let nasa = {
+  "id": 20,
+  "name": "FHAZ",
+  "rover_id": 5,
+  "full_name": "Front Hazard Avoidance Camera"
+}
+console.log(nasa["id"])
