@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+
+  </head>
+  <body>
+
+    <div id="react-container"></div>
+
+    <script type="text/babel">
+
+
+
+
+      class HelloReact extends React.Component{
+        render(){
+          return(
+            <>
+              <Banana />
+              <Banana />
+              <Banana />
+              <Banana />
+              <Banana />
+              <Banana />
+              <Banana />
+              <Banana />
+              <h1>Hello React!</h1>
+              <p>Hello Echo Class</p>
+              <p>Hello Echo Class</p>
+              <p>Hello Echo Class</p>
+              <p>Hello Echo Class</p>
+              <p>Hello Echo Class</p>
+              <p>Hello Echo Class</p>
+              <p>Hello Echo Class</p>
+              <p>Hello Echo Class</p>
+              <Footer />
+              <Footer />
+              <Footer />
+              <Footer />
+            </>
+          )
+        }
+      }
+
+
+      class Banana extends React.Component{
+        render(){
+          return (
+            <>
+              <div>This is our first React Component! Yay!</div>
+            </>
+          )
+        }
+      }
+
+      class Footer extends React.Component{
+        render(){
+          return(
+            <>
+              <h2>YO!</h2>
+            </>
+          )
+        }
+      }
+
+
+
+      const domContainer = document.querySelector('#react-container');
+      ReactDOM.render(<HelloReact />, domContainer);
+    </script>
+  </body>
+</html>
