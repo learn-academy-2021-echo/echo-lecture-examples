@@ -80,18 +80,20 @@ end
 
 
 
-p multArr
+# p multArr
 
-def show_odds nums
-    nums.map do |value|
-        # if value.even?
-        if value % 2 == 0
-            'even'
-        else
-            value
-        end    
-    end
-end
+# def show_odds nums
+#     nums.map do |value|
+#         # if value.even?
+#         if value % 2 == 0
+#             'even'
+#         else
+#             value
+#         end    
+#     end
+# end
+
+#  map is opperating upon each item in the itterable item giving us new array as a return. 
 
 # def show_odds nums
 #     nums.each do |value|
@@ -103,10 +105,20 @@ end
 #     end
 # end
 
-# p show_odds 1..90
+# These have the same output
+
+# def show_odds nums
+#     nums.each do |value|
+#          'hello'
+#     end
+# end
+
+#  Each is only acting one time per each item within the array. It is not opperating upon each item in the array like a for loop or a foreach in JS. 
+
+p show_odds [1,2,3,4]
 
 #  Select
-nums  = [2, 3, 4, 5, 6, 7, 8]
+# nums  = [2, 3, 4, 5, 6, 7, 8]
 # def is_even array
 #     array.select do |value|
 #         value.even?
