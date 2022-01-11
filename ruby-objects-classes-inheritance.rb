@@ -166,31 +166,123 @@
 
 # Adding the attr_accessor - method that creates two other methods (a getter and setter)
 
-class NetflixShow
+# class NetflixShow
+#   # Symbol - "the thing that is named...."
+#   attr_accessor :run_time, :title
+
+#   def initialize(title, run_time)
+#     @title = title
+#     @run_time = run_time
+#     @watched = false
+#   end
+#   def get_info
+#     if @watched
+#       "You have watched the TV show #{@title} is #{@run_time} long."
+#     else
+#       "You have not watched the TV show #{@title} is #{@run_time} long."
+#     end
+#   end
+#   def watched_the_show
+#     @watched = true
+#   end
+# end
+
+
+# Single Netflix show:
+# friends = NetflixShow.new('Friends', '30min')
+# p friends.get_info
+
+# p friends.run_time
+# p friends.title
+
+# ___________________________________________________________
+# Inheiritance
+
+class StreamingApp
   # Symbol - "the thing that is named...."
   attr_accessor :run_time, :title
 
   def initialize(title, run_time)
     @title = title
     @run_time = run_time
-    @watched = false
+    # dynamic values ^
+    # ----------
+    # static values  v
+    @consumed = false
   end
   def get_info
-    if @watched
+    if @consumed
       "You have watched the TV show #{@title} is #{@run_time} long."
     else
       "You have not watched the TV show #{@title} is #{@run_time} long."
     end
   end
-  def watched_the_show
-    @watched = true
+  def consumed_the_media
+    @consumed = true
   end
 end
 
 
-# Single Netflix show:
-friends = NetflixShow.new('Friends', '30min')
-p friends.get_info
+class NetflixApp < StreamingApp
+  # netflix is the largest, the first, curated content
+  def initialize(showname, show_run_time, user_name)
+    super(showname, show_run_time)
+    @user = user_name
+  end
+  def get_netflix_info
+    if @consumed
+      "#{@user} watched the TV show #{@title} is #{@run_time} long."
+    else
+      "#{@user} has not watched the TV show #{@title} is #{@run_time} long."
+    end
+  end
+end
 
-p friends.run_time
-p friends.title
+p witcher = NetflixApp.new("Witcher", "60mins", "Skywalker")
+# p witcher.get_info
+ p witcher.get_netflix_info
+
+
+
+# class YoutubeApp < StreamingApp
+#   # ads, content creators, live streams, free, comment section/ live chat, music platform
+# end
+
+# Alterantive parameter conventions
+ 
+# class SpotifyApp < StreamingApp
+#   # video and music, yearly wrap up
+#   def initialize(a, b, q, x, y, z)
+#     super(a, b)
+#     @genre = q
+#     @artist = x
+#     @user = y
+#     @album = z
+#   end
+# end
+
+
+class SpotifyApp < StreamingApp
+  # video and music, yearly wrap up
+  attr_accessor :genre, :artist, :user, :album
+  def initialize(title_param, length_param, genre_param, artist_param, user_param, album_param)
+    super(title_param, length_param)
+    @genre = genre_param
+    @artist = artist_param
+    @user = user_param
+    @album = album_param
+  end
+  def get_spotify_info
+    if @consumed
+      "#{@user} listened to #{@title} on the album #{@album} by #{@artist}. The runtime of the song is #{@length}"
+    else
+      "#{@user} has not listened to #{@title} on the album #{@album} by #{@artist}. The runtime of the song is #{@run_time}"
+    end
+  end
+end
+
+we_will_rock_you = SpotifyApp.new("We Will Rock You", "2mins 2secs", "Stadium Rock", "Queen", "Skywalker", "News to the world")
+
+p we_will_rock_you.genre
+# > "Stadium Rock"
+p we_will_rock_you.get_spotify_info
