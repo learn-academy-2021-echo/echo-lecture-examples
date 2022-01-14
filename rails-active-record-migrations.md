@@ -32,9 +32,12 @@ A migration is a file that is generated through a rails command that specificall
     - add_column :table, :column, :datatype
     - add_column :instruments, :price, :float
 
+```ruby
+    def change
+        add_column :instruments, :price, :float
+    end
+```
 
-    Other common change methods
-    
 
  $ rails db:migrate
 
@@ -42,8 +45,8 @@ A migration is a file that is generated through a rails command that specificall
 -- add_column(:instruments, :price, :float)
 -> 0.0073s
 == 20220114184150 AddColumnPriceToInstruments: migrated (0.0075s) ============= 
- $ rails generate migration change_name_of_column_instrument_name_to_name
-
+ 
+ 
 
 ## Update the values of new columns
 
