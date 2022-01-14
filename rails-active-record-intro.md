@@ -1,3 +1,5 @@
+Rails Active Record 01/14/2022
+
 ORM
 - Object Relational Mapping
 - Active Record is an ORM
