@@ -26,17 +26,20 @@ Many-to-many
 
  $ rails g model BlogPost title:string post:text image_url:string user_id:integer
 
- 
+                                                                    ^ Foreign_key:integer
+                                                (Foreign_key is always an integer in rails)
 
 Update the models in app/model
 ```ruby
 class User < ApplicationRecord
   has_many :blog_posts
+#                   ^Plural (user can make lots of blog posts)
 end
 
 
 class BlogPost < ApplicationRecord
-  belongs_to :users
+  belongs_to :user
+#              ^Singular (Blog posts only belong to one user)
 end
 ```
 
@@ -51,6 +54,7 @@ end
 - table_name-- but lowercase, snake_cased and plural (blog_posts)
 - dot (.)
 - create (create)
+- kicker.blog_posts.create 
 
 #### The whole command 
 > kicker.blog_posts.create title:"My trip to Scotland", post:"You would not believe the different kinds of wizards they have in Scotland, I found a whole train of them.", image_url:"https://www.worldtravelguide.net/wp-content/uploads/2017/03/shu-UK-Scotland-GlenfinnanViaduct_351622814-1440x823-1.jpg" 
