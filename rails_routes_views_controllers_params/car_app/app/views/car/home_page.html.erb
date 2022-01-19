@@ -1,0 +1,13 @@
+<h1>Welcome to the Car App</h1>
+<ul>
+<li><%= link_to "Noah's favorite",'/noah'%></li>
+<li><%= link_to "Kirk's favorite",'/kirk'%></li>
+<li><%= link_to "Pavan's favorite",'/pavan'%></li>
+</ul>
+
+<h3> The class's cars </h3>
+<ul>
+<% @echo_cars.map do |value|%>
+    <li><%= value %>  </li>
+<% end %>
+</ul>
