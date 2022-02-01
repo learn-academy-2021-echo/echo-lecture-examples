@@ -85,7 +85,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=YNKbdsvy2zLv0Bb0efzu8oiYN5RRir7IJN9BqmOz")
+    fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=")
       .then(response => response.json())
       .then(payload => this.setState({nasa: payload.photos}))
   }
